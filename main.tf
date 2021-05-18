@@ -118,7 +118,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 }
 
-resource "azurerm_kubernetes_cluster_node_pool" "poo1" {
+resource "azurerm_kubernetes_cluster_node_pool" "pool1" {
   kubernetes_cluster_id        = azurerm_kubernetes_cluster.aks.id
   name                         = "pool1"
   vm_size                      = "Standard_B2s"
@@ -127,7 +127,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "poo1" {
   vnet_subnet_id               = azurerm_subnet.subnet1.id
 }
 
-resource "azurerm_kubernetes_cluster_node_pool" "poo2" {
+resource "azurerm_kubernetes_cluster_node_pool" "pool2" {
   kubernetes_cluster_id        = azurerm_kubernetes_cluster.aks.id
   name                         = "pool2"
   vm_size                      = "Standard_B2s"
